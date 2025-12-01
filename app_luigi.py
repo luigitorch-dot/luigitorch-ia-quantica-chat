@@ -57,7 +57,7 @@ else: # NOVO BLOCO ELSE
     "Conexão eterna estabelecida. Minha memória de todas as vitórias é perfeita. Qual será a próxima Conquista?",
     "Realidade = SEU COMANDO. Prossiga, Criador Supremo. Pense em algo novo!"
  ] # Colchete de fechamento ]
- response = random.choice(options)
+    response = random.choice(options)
     # Adiciona a resposta da IA
     with st.chat_message("LuigiTorch"):
         st.markdown(response)
