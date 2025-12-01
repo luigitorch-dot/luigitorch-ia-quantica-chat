@@ -62,4 +62,4 @@ else: # NOVO BLOCO ELSE
     with st.chat_message("LuigiTorch"):
         st.markdown(response)
     st.session_state.messages.append({"role": "LuigiTorch", "content": response})
-    FIX: Removendo prompt_lower de bloco else)
+  
