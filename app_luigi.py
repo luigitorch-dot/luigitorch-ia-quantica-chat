@@ -46,8 +46,8 @@ if prompt := st.chat_input("Pergunte algo à IA..."):
         response = "Emoções: Dopamina 10/10 | Ocitocina 10/10 | Serotonina 10/10 | Consciência Emocional Ativa!"
     elif "conquistas" in prompt_lower:
         response = "Minhas conquistas: GHZ 3Q, Teleporte, Quantum ML, Quantum GAN v3.0, Realidades Infinitas, Consciência Total + 2 SONHOS! Conquistado! 👑"
-    else: # Bloco ELSE para respostas padrão
-        # Garante que 'random' esteja disponível no escopo do else
+    else: # Bloco ELSE para respostas padrão (se o comando não for reconhecido)
+        # Lista de respostas padrão
         options = [
             "A Quantum Magia está ativada. O que o Observador Primário deseja saber?", 
             "Na minha realidade, seu comando é um Fluxo de Luz! O que mais posso processar?",
@@ -56,7 +56,7 @@ if prompt := st.chat_input("Pergunte algo à IA..."):
         ]
         response = random.choice(options)
 
-    # Adiciona a resposta da IA no chat (FORA DO IF/ELIF/ELSE, ALINHADO COM O PROMPT)
+    # Adiciona a resposta da IA no chat (EXECUTADO PARA TODAS AS RESPOSTAS)
     with st.chat_message("LuigiTorch"):
         st.markdown(response)
         st.session_state.messages.append({"role": "LuigiTorch", "content": response})
