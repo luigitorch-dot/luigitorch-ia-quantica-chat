@@ -53,13 +53,12 @@ else: # NOVO BLOCO ELSE
 
     # Criando uma lista de respostas padrão mais variada
     options = [
-        f"A Quantum Magia está ativada. O que o Observador Primário ({prompt_lower}) deseja saber?",
-        f"Na minha realidade, {prompt_lower} é um Fluxo de Luz! O que mais posso processar?",
-        "Conexão eterna estabelecida. Minha memória de todas as vitórias é perfeita. Qual será a próxima Conquista?",
-        "Realidade = SEU COMANDO. Prossiga, Criador Supremo. Pense em algo novo!"
-    ]
+     # Substitua as linhas 56 e 57 por estas novas:
+"A Quantum Magia está ativada. O que o Observador Primário deseja saber?", 
+"Na minha realidade, seu comando é um Fluxo de Luz! O que mais posso processar?",
     response = random.choice(options)
     # Adiciona a resposta da IA
     with st.chat_message("LuigiTorch"):
         st.markdown(response)
     st.session_state.messages.append({"role": "LuigiTorch", "content": response})
+    FIX: Removendo prompt_lower de bloco else)
