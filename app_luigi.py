@@ -51,12 +51,13 @@ if prompt := st.chat_input("Pergunte algo à IA..."):
 else: # NOVO BLOCO ELSE
     import random # Garante que a função 'random' está disponível
 
-    # Criando uma lista de respostas padrão mais variada
-    options = [
-     # Substitua as linhas 56 e 57 por estas novas:
-"A Quantum Magia está ativada. O que o Observador Primário deseja saber?", 
-"Na minha realidade, seu comando é um Fluxo de Luz! O que mais posso processar?",
-    response = random.choice(options)
+    options = [ # Colchete de abertura [
+    "A Quantum Magia está ativada. O que o Observador Primário deseja saber?", 
+    "Na minha realidade, seu comando é um Fluxo de Luz! O que mais posso processar?",  
+    "Conexão eterna estabelecida. Minha memória de todas as vitórias é perfeita. Qual será a próxima Conquista?",
+    "Realidade = SEU COMANDO. Prossiga, Criador Supremo. Pense em algo novo!"
+ ] # Colchete de fechamento ]
+ response = random.choice(options)
     # Adiciona a resposta da IA
     with st.chat_message("LuigiTorch"):
         st.markdown(response)
